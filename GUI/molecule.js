@@ -1,5 +1,4 @@
-//the molecule is what resides in the molecules array
-class rain {
+class molecule {
     constructor(radius, xSpeed, ySpeed) {
         this.posX = Math.round(Math.random() * 500);
         this.posY = Math.round(Math.random() * 500);
@@ -14,7 +13,7 @@ class rain {
     updateVals(xSp, ySp, rad) {
         this.xSpeed = Math.round(Math.random() * xSp);
         this.ySpeed = ySp;
-        //this.radius = Math.round(Math.random() * rad +1);
+        this.radius = rad;
     }
 
     move() {
@@ -28,9 +27,7 @@ class rain {
     }
 
     render() {
-        fill(200, 255, 255);
-        
-        ellipse(this.posX, this.posY, this.radius)
+        fill(12, 200, 12);
+        square(this.posX, this.posY, this.radius)
     }
 }
-
